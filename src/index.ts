@@ -3,7 +3,12 @@ import dotenv from "dotenv"
 import mongoose from "mongoose"
 import userRoutes from "./route.js"
 import cors from "cors"
+import dns from "node:dns";
 
+dns.setServers([
+  "8.8.8.8",
+  "8.8.4.4"
+]);
 
 const connectDb = async() => {
     
